@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+</head>
+<body>
+    <h1>Pilih Warna</h1>
+    <label>Red : </label>
+    <input type="range" id="colorRange" min="0" max="300">
+    
+  <button onclick="berubah()" class="btn" id="btn">klik me!</button>
+    <br><br>
+
+    <label>Green</label>
+    <input  type="range" class="green" id="green">
+
+    <script>
+        let ubahWarna = document.getElementById('colorRange')
+            ubahWarna.addEventListener('input', function() {
+            let warna = ubahWarna.value
+            let warnaRGB = `rgb(${warna}, 100, 100)`;  
+                document.body.style.backgroundColor = warnaRGB;
+            });
+
+     function berubah () {
+        document.body.style.backgroundColor = 'red'
+     } 
+
+     let gantiWarna = document.getElementById('green')
+     gantiWarna.addEventListener('input', ()=> {
+
+     })
+         let ubahHijau = document.getElementById('green')
+         ubahHijau.addEventListener('input', function(){
+            let hijau = ubahHijau.value
+            let warnaG = `rgb(${hijau}, 100, 100)`;
+            document.body.style.backgroundColor = warnaG
+         })
+         
+
+
+    </script>
+
+</body>
+</html>
